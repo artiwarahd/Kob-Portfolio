@@ -1,0 +1,19 @@
+development: &default
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: "slayer"
+  pool: 5
+  timeout: 5000
+  database: kob_portfolio_development
+
+test:
+  <<: *default
+  database: kob_portfolio_test<%= ENV['TEST_ENV_NUMBER'] %>
+
+production: &production
+  <<: *default
+  username: root
+  password: "Splash446"
+  database: kob_portfolio_production
+
