@@ -1,4 +1,34 @@
-<div id='landing'>
-  <h1 class='welcome-message'>Welcome to Ketnipa's Portfolio</h1>
-  <h3 class='full-name'>Ketnipha Pontongshaisawad</h3>
+<div id='landing' class='wrap'>
+    <h3 class='center big'>PORTFOLIO</h3>
+    <h3 class='center'>Ketnipha Pontongshaisawad</h3>
+    <div id='home'>
+        <h3>Somethings Here</h3>
+        <p class='white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas nec metus vel volutpat. Integer vel sagittis leo, ac dignissim justo. Maecenas luctus aliquet sollicitudin. Nam eleifend porta felis quis sagittis. Fusce condimentum velit ipsum, id interdum dui bibendum ac. Integer a eros sed nibh interdum aliquam. Praesent sit amet ipsum mi. Quisque et odio sed purus ullamcorper rhoncus eu a turpis. Phasellus sit amet mi non leo tempor feugiat in sed tellus.</p>
+        <p class='white'>Vestibulum euismod massa vel nisi auctor laoreet. Duis hendrerit hendrerit mi porta pulvinar. Pellentesque egestas turpis eget feugiat accumsan. In hac habitasse platea dictumst. In at mollis neque. Fusce hendrerit lobortis lorem in laoreet. Phasellus metus felis, faucibus id lobortis vel, pellentesque sit amet lacus.</p>
+    </div>
+</div>
+
+<div id='main-nav'>
+  <ul class='button-group'>
+    <% @main_nav.each do |label, anchor_id| %>
+      <%= link_to homes_path(anchor: anchor_id) do %>
+        <li class='fluid-button'>
+            <p></p>
+            <span class='static-name'><%= label %></span>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div id='about-me' class='wrap'>
+    <div class='left'>
+        <img class='profile-picture' src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn1/t1/1016658_10200904839696577_1567521359_n.jpg" alt="">
+    </div>
+    <div class='right'>
+        <h3>About me</h3>
+        <p class='white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non posuere ligula. Duis quis nisl non nisl commodo sodales quis id dui. Nam facilisis sodales libero eu pretium. Nullam faucibus adipiscing venenatis. Nam adipiscing interdum neque, sit amet feugiat leo auctor non.</p>
+        <p class='white'>Cras at erat iaculis, convallis nulla non, pretium justo. Nulla scelerisque non arcu eget pellentesque. Praesent consequat fringilla lectus ac iaculis. Nullam pharetra nulla condimentum lectus hendrerit, mattis imperdiet eros luctus. Vivamus ut sapien commodo dolor blandit laoreet. Suspendisse egestas mi vestibulum ultrices pellentesque.</p>
+        <p class='white'>Aenean facilisis quam ac risus ultrices, sed aliquam mi fringilla. Proin nisl mauris, porttitor pulvinar interdum ut, accumsan vitae dolor.</p>
+    </div>
 </div>
