@@ -1,0 +1,29 @@
+#portfolio {
+  clear: both;
+  background-color: rgba(21,21,21, .97);
+  padding: 3% 10%;
+
+  .work-item {
+    overflow: hidden;
+    margin-bottom: 50px;
+
+    .work-item-left {
+      width: 50%;
+      float: left;
+    }
+    .work-item-right {
+      width: 50%;
+      float: right;
+      color: #FFF;
+
+      .work-title {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .thumbnail {
+    height: 400px;
+    wirdth: auto;
+  }
+}

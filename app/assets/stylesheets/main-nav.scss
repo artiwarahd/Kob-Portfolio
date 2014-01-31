@@ -1,0 +1,88 @@
+#main-nav {
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+}
+
+ul.button-group {
+  text-align: center;
+  display: table;
+  width: 100%;
+  margin: 0;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  li {
+    margin: 0 1%;
+  }
+}
+
+
+.fluid-button {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.fluid-button p {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 120px;
+    height: 120px;
+    border: 5px solid #777;
+    margin: 10px;
+    border-radius: 50%;    
+}
+
+.fluid-button *{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.fluid-button .static-name {
+    display: inline-block;
+    font-weight: 600;
+    position: absolute;
+    width: 120px;
+    left: 50%;
+    top: 65px;
+    margin-left: -60px;
+    font-size: 14px;
+
+    a {
+      color: #777;
+    }
+}
+
+.fluid-button:hover p{
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  border-radius:20px;
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+  border-color: #37bdb5;
+  background-color: #2980b9;
+}
+
+.fluid-button:hover span {
+  font-weight: bold;
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+}
