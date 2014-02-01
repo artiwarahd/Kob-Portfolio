@@ -3,6 +3,7 @@
   bottom: 0;
   width: 100%;
   background-color: #000;
+  z-index: 4;
 }
 
 ul.button-group {
@@ -56,10 +57,6 @@ ul.button-group {
     top: 65px;
     margin-left: -60px;
     font-size: 14px;
-
-    a {
-      color: #777;
-    }
 }
 
 .fluid-button:hover p{

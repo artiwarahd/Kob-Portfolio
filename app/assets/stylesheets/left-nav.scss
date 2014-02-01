@@ -1,0 +1,57 @@
+#left-nav {
+  position: fixed; 
+  width: 200px;
+  background-color: #000;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+
+  ul {
+    margin-top: 70%;
+  }
+
+
+  .fluid-button p {
+      display: block;
+      position: relative;
+      z-index: 0;
+      width: 120px;
+      height: 40px;
+      border: 5px solid #777;
+      margin: 10px;
+      border-radius: 5%;    
+  }
+
+  .fluid-button .static-name {
+      display: inline-block;
+      font-weight: 600;
+      position: absolute;
+      width: 120px;
+      left: 50%;
+      top: 20px;
+      margin-left: -60px;
+      font-size: 14px;
+  }
+
+  .fluid-button:hover p{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    border-color: #37bdb5;
+    background-color: #2980b9;
+  }
+
+  .fluid-button:hover span {
+    font-weight: bold;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+
+    a {
+      color: #FFF;
+      text-decoration: none;
+    }
+  }
+}
