@@ -9,6 +9,12 @@ Globals = {
     // https://github.com/imakewebthings/jquery-waypoints
     // Globals.animateAppear(".left", "left");
     // Globals.animateAppear(".right", "right");
+
+    // $('#container').isotope({
+    //   // options
+    //   itemSelector : '.item',
+    //   layoutMode : 'fitRows'
+    // });
   }
 };
 
