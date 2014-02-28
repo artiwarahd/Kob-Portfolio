@@ -5,16 +5,31 @@ Globals = {
     }, 500);
   },
   init: function(){
-    // Use with jQuery waypoints
-    // https://github.com/imakewebthings/jquery-waypoints
-    // Globals.animateAppear(".left", "left");
-    // Globals.animateAppear(".right", "right");
+    // cache container
+    var $container = $('#container');
+    // initialize isotope
+    $container.isotope({
+      animationOptions: {
+        duration: 750,
+        easing: 'linear',
+        queue: false
+      }
+    });
 
-    // $('#container').isotope({
-    //   // options
-    //   itemSelector : '.item',
-    //   layoutMode : 'fitRows'
-    // });
+    // filter items when filter link is clicked
+    $('#filters').find('a').click(function(){
+      var selector = $(this).attr('data-option-value');
+      $container.isotope({ 
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        } 
+      });
+      return false;
+    });
+
   }
 };
 

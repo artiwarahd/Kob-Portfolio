@@ -1,17 +1,35 @@
 <div id='portfolio' class='wrap sub-wrap'>
   <h3>Portfolio</h3>
 
+  <section id="options" class="clearfix">
+    <div class="option-combo">
+      <h2>Filter:</h2>
+      <ul id="filters" class="option-set clearfix" data-option-key="filter">
+        <li><a href="#show-all" data-option-value="*" class="selected">show all</a></li>
+        <li><a href="#job" data-option-value=".job">job</a></li>
+        <li><a href="#study" data-option-value=".study">study</a></li>
+      </ul>
+    </div>
+  </section>
+
   <div id='container'>
-    <div class='item'><%= image_tag "folio/PLATE3.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE4.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE5.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE6.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE7.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE8.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE9.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE10.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE11.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE12.jpg", class: "thumbnail" %></div>
-    <div class='item'><%= image_tag "folio/PLATE13.jpg", class: "thumbnail" %></div>
+
+    <% @images.each do |root_key, values| %>
+
+      <% values.each do |sub_key, pictures| %>
+
+        <% pictures.each do |picture| %>
+
+          <div class='element width2 height2 <%= "#{root_key} #{sub_key}" %>'>
+            <% picture.slice! "app/assets/images/" %>
+            <%= image_tag picture, class: "thumbnail" %>
+          </div>
+
+        <% end %>
+
+      <% end %>
+
+    <% end %>
+
   </div>
 </div>
