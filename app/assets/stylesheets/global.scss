@@ -3,6 +3,7 @@
 //= require portfolio
 //= require about_me
 //= require contact
+//= require isotope
 
 html, body {
     font-size:   12px;
@@ -76,4 +77,11 @@ li {
 
 .white {
     color: #FFF;
+}
+
+#filters {
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
 }
