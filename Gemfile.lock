@@ -49,6 +49,12 @@ GEM
       thor
     builder (3.0.4)
     cancan (1.6.10)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -76,6 +82,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.9)
     inherited_resources (1.4.1)
@@ -101,11 +108,18 @@ GEM
       polyamorous (~> 0.5.0)
     mime-types (1.25.1)
     multi_json (1.8.4)
-    mysql2 (0.3.15)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     orm_adapter (0.5.0)
     parallel (0.5.18)
     parallel_tests (0.8.8)
       parallel
+    pg (0.17.1)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -150,6 +164,8 @@ GEM
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
+    rvm-capistrano (1.5.1)
+      capistrano (~> 2.15.4)
     sass (3.2.14)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -184,18 +200,20 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   cancan
+  capistrano
   coffee-rails (~> 3.2.1)
   database_cleaner
   devise
   factory_girl_rails
   jquery-rails
-  mysql2
   parallel (= 0.5.18)
   parallel_tests (= 0.8.8)
+  pg
   railroady
   rails (= 3.2.8)
   rmagick (~> 2.13.2)
   rspec-rails (= 2.12.0)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   shoulda-matchers (= 1.4.1)
   therubyracer

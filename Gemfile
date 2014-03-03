@@ -26,9 +26,9 @@ gem 'activeadmin'
 # gem 'paperclip'
 gem "rmagick", "~> 2.13.2"
 
-# gem 'capistrano'
-# gem 'rvm-capistrano'
-gem "mysql2"
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'pg'
 
 group :development, :test do
   # gem 'capybara'
@@ -39,10 +39,6 @@ group :development, :test do
   gem 'shoulda-matchers', '1.4.1'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-end
-
-group :production do
-  gem 'pg'
 end
 
 group :ubuntu do

@@ -1,8 +1,9 @@
 development: &default
-  adapter: mysql2
+  adapter: postgresql
   host: localhost
-  username: root
-  password: "slayer"
+  encoding: unicode
+  username: postgres
+  password: "12345"
   pool: 5
   timeout: 5000
   database: kob_portfolio_development
@@ -11,12 +12,7 @@ test:
   <<: *default
   database: kob_portfolio_test<%= ENV['TEST_ENV_NUMBER'] %>
 
-production: &production
+production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  database: myapp_production
-  pool: 5
-  username: myapp
-  password:
+  database: kob_portfolio_production
 
