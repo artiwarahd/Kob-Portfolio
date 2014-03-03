@@ -23,7 +23,12 @@
 
           <div class='element  <%= "#{root_key} #{sub_key}" %>'>
             <% picture.slice! "app/assets/images/" %>
-            <%= image_tag picture, class: "thumbnail" %>
+
+            <% full_picture = picture.dup %>
+            <% full_picture.slice! "_thumb" %>
+            <a href='<%= "assets/#{full_picture}" %>' data-lightbox='<%= picture %>' class='lightbox'>
+              <%= image_tag picture, class: "thumbnail" %>
+            </a>
           </div>
 
         <% end %>
