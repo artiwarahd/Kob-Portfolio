@@ -26,13 +26,44 @@
     padding: 0;
     border: none;
     border-radius: 0;
-    width: 400px;
+    width: 425px;
     height: 200px;
   }
 
   .element {
     a.lightbox {
       position: static;
+    }
+  }
+
+  .description {
+    padding: 20px;
+
+    .pink {
+      margin-bottom: 0;
+      font-size: 22px;
+    }
+
+    .white {
+      margin-top: 10px;
+      font-size: 16px;
+      display: block;
+    }
+  }
+
+  #filters {
+    text-align: center;
+    margin-top: 0;
+
+    li {
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 }

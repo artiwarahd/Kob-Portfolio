@@ -9,12 +9,10 @@ html, body {
     font-size:   12px;
     line-height: 18px;
   height: 100%;
-  background-color: #3d3d3d;
   margin: 0;
 }
 
 .wrap {
-    padding: 3% 10%;
     clear: both;
     overflow: hidden;
     position: relative;
@@ -42,7 +40,6 @@ html, body {
 }
 
 h3 {
-    color: #FFF;
     font-weight: bold;
     white-space: nowarp;
     margin-top: 0;
@@ -54,7 +51,7 @@ ul {
 }
 
 li {
-    color: #FFF;
+    color: #000;
     line-height: 24px;
     white-space: nowarp;
 }
@@ -65,6 +62,22 @@ li {
     background-color: #000;
     height: 100%;
     padding-bottom: 0;
+    background-image: url("folio/plate2.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.7;
+    filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+
+#owner {
+    color: black;
+    float: right;
+    font-size: 16px;
+    margin-top: 180px;
+    margin-right: 160px;
 }
 
 .center {
@@ -84,4 +97,8 @@ li {
         display: inline-block;
         margin: 0 5px;
     }
+}
+
+.pink {
+    color: #fd02db;
 }

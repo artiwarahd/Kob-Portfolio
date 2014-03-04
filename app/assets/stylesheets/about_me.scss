@@ -1,5 +1,12 @@
-.profile-picture {
-    width: 100%;
-    height: auto;
-    margin-right: 30px;
+#about-me {
+  padding: 20px;
+  .profile-picture {
+      width: 100%;
+      height: auto;
+      margin-right: 30px;
+  }
+
+  .black {
+    margin-left: 20px;
+  }
 }

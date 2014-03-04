@@ -2,8 +2,7 @@
   <ul class='button-group'>
     <% @main_nav.each do |label, anchor_id| %>
       <%= link_to homes_path(anchor: anchor_id) do %>
-        <li class='fluid-button'>
-            <p></p>
+        <li class='button'>
             <span class='static-name'><%= label %></span>
         </li>
       <% end %>
