@@ -1,8 +1,8 @@
 #main-nav {
-  position: absolute; 
   bottom: 0;
   width: 100%;
   z-index: 4;
+  height: 10%;
 }
 
 ul.button-group {
@@ -11,6 +11,11 @@ ul.button-group {
   width: 100%;
   margin: 0;
   background-color: white;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 
   a, a:hover {
     text-decoration: none !important;
@@ -41,5 +46,19 @@ ul.button-group {
     -moz-transform: scale(1.5);
     -ms-transform: scale(1.5);
     transform: scale(1.5);
+  }
+}
+
+.black-bg {
+  ul.button-group {
+    background-color: black;
+
+    li {
+      color: white;
+    }
+
+    li:hover {
+      color: #fd02db;
+    }
   }
 }

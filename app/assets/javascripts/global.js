@@ -4,6 +4,44 @@ Globals = {
         direction: direction
     }, 500);
   },
+  loadStickyNav: function(){
+    var stickyNavTop = $('#main-nav').offset().top;  
+
+    var stickyNav = function(){  
+      var scrollTop = $(window).scrollTop();  
+             
+      if (scrollTop > stickyNavTop) {   
+        $('#main-nav').addClass('sticky');  
+      } else {  
+        $('#main-nav').removeClass('sticky');   
+      }  
+    };  
+      
+    stickyNav();  
+      
+    $(window).scroll(function() {  
+      stickyNav();  
+    });  
+  },
+  loadAboutMeNav: function(){
+    var aboutMeNavTop = $('#about-me').offset().top;  
+
+    var aboutMeNav = function(){  
+      var scrollTop = $(window).scrollTop();  
+             
+      if (scrollTop > aboutMeNavTop) {   
+        $('#main-nav').addClass('black-bg');  
+      } else {  
+        $('#main-nav').removeClass('black-bg');   
+      }  
+    };  
+      
+    aboutMeNav();  
+      
+    $(window).scroll(function() {  
+      aboutMeNav();  
+    });  
+  },
   init: function(){
     // cache container
     var $container = $('#container');
@@ -32,6 +70,9 @@ Globals = {
       $(this).addClass("selected");
       return false;
     });
+
+    Globals.loadStickyNav();
+    Globals.loadAboutMeNav();
   }
 };
 
