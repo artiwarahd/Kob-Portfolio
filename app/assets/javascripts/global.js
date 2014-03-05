@@ -27,9 +27,11 @@ Globals = {
           queue: false
         } 
       });
+
+      $('#filters').find('a.selected').removeClass("selected");
+      $(this).addClass("selected");
       return false;
     });
-
   }
 };
 
