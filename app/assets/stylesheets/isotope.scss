@@ -73,14 +73,14 @@ body {
 }
 
 #container {
-  padding: 5px;
+  padding: 0 4px;
   margin-bottom: 20px;
 }
 
 .element {
   width: 400px;
   height: 200px;
-  margin: 10px;
+  margin: 0 0 20px 20px;
   float: left;
   overflow: hidden;
   position: relative;

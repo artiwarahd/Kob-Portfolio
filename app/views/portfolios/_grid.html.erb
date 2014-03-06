@@ -18,6 +18,30 @@
   </section>
 
   <div id='container'>
+    <% @arsomsilp_works.each do |project_name, cover_and_images| %>
+
+      <% picture = cover_and_images["cover"].first %>
+      <div class='element <%= "job #{project_name}" %>'>
+        <% picture.slice! "app/assets/images/" %>
+
+        <% full_picture = picture.dup %>
+        <% full_picture.slice! "_thumb" %>
+        <a href='<%= "assets/#{full_picture}" %>' data-lightbox='<%= project_name %>' class='lightbox'>
+          <%= image_tag picture, class: "thumbnail" %>
+        </a>
+      </div>
+
+      <% cover_and_images["images"].each do |image| %>
+        <div class='<%= "hide job #{project_name}" %>'>
+          <% image.slice! "app/assets/images/" %>
+
+          <% full_picture = image.dup %>
+          <% full_picture.slice! "_thumb" %>
+          <a href='<%= "assets/#{full_picture}" %>' data-lightbox='<%= project_name %>' class='lightbox'></a>
+      </div>
+      <% end %>
+
+    <% end %>
 
     <% @images.each do |root_key, values| %>
 
