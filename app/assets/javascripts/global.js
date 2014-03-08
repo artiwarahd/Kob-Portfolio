@@ -42,6 +42,20 @@ Globals = {
       aboutMeNav();  
     });  
   },
+  smoothScroll: function(){
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  },
   init: function(){
     // cache container
     var $container = $('#container');
@@ -73,6 +87,7 @@ Globals = {
 
     Globals.loadStickyNav();
     Globals.loadAboutMeNav();
+    Globals.smoothScroll();
   }
 };
 
