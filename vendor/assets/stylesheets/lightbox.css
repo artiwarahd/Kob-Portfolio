@@ -120,6 +120,7 @@ body:after {
 .lb-prev {
   left: 0;
   float: left;
+  background: url(prev.png) left 48% no-repeat;
 }
 /* line 87, ../sass/lightbox.sass */
 .lb-prev:hover {
@@ -130,6 +131,7 @@ body:after {
 .lb-next {
   right: 0;
   float: right;
+  background: url(next.png) right 48% no-repeat;
 }
 /* line 93, ../sass/lightbox.sass */
 .lb-next:hover {
@@ -179,8 +181,9 @@ body:after {
   display: block;
   clear: left;
   padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
 }
 /* line 121, ../sass/lightbox.sass */
 .lb-data .lb-close {

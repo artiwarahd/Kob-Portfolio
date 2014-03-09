@@ -13,6 +13,8 @@
         <li><a href="#job" data-option-value=".job" class="pink">My jobs</a></li>
         <li> | </li>
         <li><a href="#study" data-option-value=".study" class="pink">My studies</a></li>
+        <li> | </li>
+        <li><a href="#study" data-option-value=".honor" class="pink">Honor & Special training</a></li>
       </ul>
     </div>
   </section>
@@ -20,9 +22,8 @@
   <div id='container'>
     <% @arsomsilp_works.each do |project_name, cover_and_images| %>
 
-      <% picture = cover_and_images["cover"].first %>
+      <% picture = cover_and_images["cover"] %>
       <div class='element <%= "job #{project_name}" %>'>
-        <% picture.slice! "app/assets/images/" %>
 
         <% full_picture = picture.dup %>
         <% full_picture.slice! "_thumb" %>
@@ -42,6 +43,26 @@
       <% end %>
 
     <% end %>
+
+    <!-- THESIS -->
+    <div class='element study thesis'>
+      <% image = @thesis["cover"] %>
+      <% full_image = image.dup %>
+      <% full_image.slice! "_thumb" %>
+      <a href='<%= "assets/#{full_image}" %>' data-lightbox='thesis' class='lightbox'>
+        <%= image_tag image, class: "thumbnail" %>
+      </a>
+    </div>
+    <% @thesis["images"].each do |image| %>
+      <div class='study thesis'>
+        <% image.slice! "app/assets/images/" %>
+
+        <% full_image = image.dup %>
+        <% full_image.slice! "_thumb" %>
+        <a href='<%= "assets/#{full_image}" %>' data-lightbox='thesis' class='lightbox'></a>
+      </div>
+    <% end %>
+    <!-- THESIS -->
 
     <% @images.each do |root_key, values| %>
 
@@ -64,6 +85,19 @@
       <% end %>
 
     <% end %>
+
+    <!-- HONOR -->
+    <% @honor.each do |image| %>
+      <div class='element honor' >
+        <% image.slice! "app/assets/images/" %>
+        <% full_image = image.dup %>
+        <% full_image.slice! "_thumb" %>
+        <a href='<%= "assets/#{full_image}" %>' data-lightbox='<%= image %>' class='lightbox'>
+          <%= image_tag image, class: "thumbnail" %>
+        </a>
+      </div>
+    <% end %>
+    <!-- HONOR -->
 
   </div>
 </div>
